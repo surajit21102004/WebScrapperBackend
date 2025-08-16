@@ -34,7 +34,7 @@ const testConnection = async () => {
   }
 };
 
-// Test connection when module loads
+
 testConnection();
 
 module.exports = supabase;

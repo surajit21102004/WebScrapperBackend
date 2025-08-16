@@ -5,7 +5,7 @@ const rateLimit = require('express-rate-limit');
 const websiteController = require('../controllers/websiteController');
 const { validateWebsite } = require('../middleware/validation');
 
-// Rate limiting
+
 const analyzeLimit = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 10

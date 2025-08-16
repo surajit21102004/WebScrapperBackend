@@ -12,9 +12,10 @@ app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json());
 
-// Add after existing middleware
+
 const websiteRoutes = require('./routes/websiteRoutes');
 const errorHandler = require('./middleware/errorHandler');
+
 // Routes
 app.use('/api/websites', websiteRoutes);
 
@@ -34,6 +35,7 @@ app.get('/', (req, res) => {
     }
   });
 });
+
 // Error handling (must be last)
 app.use(errorHandler);
 
